@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Website Keren</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#0f172a,#1e293b);
+    color:white;
+    min-height:100vh;
+}
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    padding:20px 50px;
+    background:rgba(255,255,255,0.05);
+    backdrop-filter:blur(10px);
+}
+
+.logo{
+    font-size:24px;
+    font-weight:bold;
+}
+
+.hero{
+    text-align:center;
+    padding:120px 20px;
+}
+
+.hero h1{
+    font-size:60px;
+    margin-bottom:15px;
+}
+
+.hero p{
+    font-size:20px;
+    opacity:0.8;
+}
+
+button{
+    margin-top:25px;
+    padding:12px 25px;
+    border:none;
+    border-radius:10px;
+    background:#38bdf8;
+    color:white;
+    cursor:pointer;
+    font-size:18px;
+    transition:0.3s;
+}
+
+button:hover{
+    transform:scale(1.1);
+}
+
+.card{
+    width:300px;
+    margin:40px auto;
+    padding:25px;
+    background:rgba(255,255,255,0.08);
+    border-radius:15px;
+    text-align:center;
+}
+</style>
+</head>
+<body>
+
+<nav>
+    <div class="logo">🚀 My Website</div>
+</nav>
+
+<section class="hero">
+    <h1>Halo Dunia!</h1>
+    <p>Website modern dengan HTML, CSS, dan JavaScript.</p>
+    <button onclick="showMessage()">Klik Saya</button>
+</section>
+
+<div class="card">
+    <h2>Info</h2>
+    <p id="text">Belajar coding itu seru!</p>
+</div>
+
+<script>
+function showMessage(){
+    let pesan = [
+        "Semangat belajar coding!",
+        "Kamu pasti bisa!",
+        "HTML + CSS + JS Mantap!",
+        "Jangan menyerah!"
+    ];
+
+    let random = Math.floor(Math.random()*pesan.length);
+    document.getElementById("text").innerHTML = pesan[random];
+}
+</script>
+
+</body>
+</html>
